@@ -207,7 +207,6 @@ local config = {
                         ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
                         ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
                         ["<leader>zm"] = { ":ZenMode<cr>", desc = "Enter Zen Mode" },
-                        ["<leader>zc"] = { ":close<cr>", desc = "Quit Zen Mode" },
                         -- quick save
                         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
                 },
