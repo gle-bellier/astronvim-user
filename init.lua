@@ -1,4 +1,4 @@
---              AstroNvim Configuration Table
+--AstroNvim Configuration :Table
 -- All configuration changes should go inside of the table below
 
 -- You can think of a Lua "table" as a dictionary like data structure the
@@ -249,7 +249,27 @@ local config = {
                                                 -- refer to the configuration section below
                                         }
                                 end
+                        },
+                        { "xiyaowong/nvim-transparent",
+                                config = function()
+                                        require("transparent").setup {
+                                                enable = true,
+                                                extra_groups = { -- table/string: additional groups that should be cleared
+                                                        -- In particular, when you set it to 'all', that means all available groups
+                                                        "all"
+                                                        -- example of akinsho/nvim-bufferline.lua
+                                                        -- "BufferLineTabClose",
+                                                        -- "BufferlineBufferSelected",
+                                                        -- "BufferLineFill",
+                                                        -- "BufferLineBackground",
+                                                        -- "BufferLineSeparator",
+                                                        -- "BufferLineIndicatorSelected"
+                                                },
+                                        }
+                                end
                         }
+
+
                 },
                 -- All other entries override the require("<key>").setup({...}) call for default plugins
                 ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
